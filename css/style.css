@@ -541,11 +541,9 @@ p {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 300px;
-  background-image: url(https://images.pond5.com/concert-phone-music-light-090454948_prevstill.jpeg);
+  background-image: url(https://www.rollingstone.com/wp-content/uploads/2023/08/the_crowd_takes_the_stage__tech_trends_in_entertainment.png?w=1600&h=900&crop=1);
   background-size: cover;
-  background-position-y: center;
-  filter: grayscale(100%);
-  position: sticky; }
+  background-position-y: center; }
 
 /* FORMULARIO CONTACTO */
 .contenedor-form {
