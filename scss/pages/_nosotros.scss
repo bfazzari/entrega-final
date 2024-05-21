@@ -56,7 +56,8 @@
     .card {
         border-radius: 10px 10px 20px 20px;
         overflow: hidden;
-
+        max-height: 40em;
+        display: flex;
         h5,
         p {
             color: black;
@@ -69,6 +70,7 @@
 
         img {
             width: 100%;
+            
         }
     }
 

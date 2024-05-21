@@ -150,7 +150,8 @@
         /* background-color: red; */
         margin: auto 5px;
     }
-    .col-alienada{
+
+    .col-alienada {
         display: flex;
     }
 }
@@ -212,16 +213,22 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 2em;
-
-
     background-color: #e6e6e6;
     opacity: 1;
     background: radial-gradient(circle, transparent 10%, #e6e6e6 20%, #e6e6e6 80%, transparent 10%, transparent), radial-gradient(circle, transparent 1%, #e6e6e6 80%, #e6e6e6 10%, transparent 10%, transparent) 22.5px 22.5px, linear-gradient(#11133a 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #11133a 1.8px, #e6e6e6 1.8px) -0.9px 0;
     background-size: 100%;
+a{
+    align-self: center;
+}
 
-
+    img {
+        width: auto;
+        max-height: 180px;
+    }
     .card {
         margin: 1em auto;
+        display: flex;
+        overflow: hidden;
     }
     .card:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -233,7 +240,7 @@ p {
 
     .card:hover .card-img-top {
         transform: scale(1.01);
-        filter:saturate(10%);
+        filter: saturate(10%);
     }
 
 

@@ -418,8 +418,15 @@ p {
   opacity: 1;
   background: radial-gradient(circle, transparent 10%, #e6e6e6 20%, #e6e6e6 80%, transparent 10%, transparent), radial-gradient(circle, transparent 1%, #e6e6e6 80%, #e6e6e6 10%, transparent 10%, transparent) 22.5px 22.5px, linear-gradient(#11133a 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #11133a 1.8px, #e6e6e6 1.8px) -0.9px 0;
   background-size: 100%; }
+  .contenedor-bandas a {
+    align-self: center; }
+  .contenedor-bandas img {
+    width: auto;
+    max-height: 180px; }
   .contenedor-bandas .card {
-    margin: 1em auto; }
+    margin: 1em auto;
+    display: flex;
+    overflow: hidden; }
   .contenedor-bandas .card:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
   .contenedor-bandas .card-img-top {
@@ -639,13 +646,48 @@ p {
   margin-top: 50px; }
   .main-bandas h2 {
     margin-top: 100px; }
+  .main-bandas .texto-random-centrado p {
+    color: black;
+    background-color: #b1b1b1; }
+
+.contenedor-licencias-musica {
+  background-color: #212529;
+  color: white;
+  padding: 25px 50px;
+  margin: 100px 0; }
+  .contenedor-licencias-musica h2,
+  .contenedor-licencias-musica h3 {
+    margin: 15px; }
+  .contenedor-licencias-musica .licencias-items {
+    text-align: left;
+    margin: 20px 100px; }
+    .contenedor-licencias-musica .licencias-items .item {
+      font-size: 25px;
+      font-weight: bold;
+      color: yellow; }
+    .contenedor-licencias-musica .licencias-items p {
+      display: inline; }
+  .contenedor-licencias-musica .btn {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+    border-color: yellow;
+    margin: 30px auto;
+    border-radius: 100px; }
 
 h2 {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 20px; }
 
 h3 {
+  font-weight: bold;
   text-align: center;
-  margin-top: 4em; }
+  margin-top: 2em;
+  margin-bottom: 1.5em; }
+
+h4 {
+  text-align: center;
+  margin: 2em 5em; }
 
 .contenedor-bandas {
   margin: auto 10em;
@@ -747,7 +789,9 @@ h3 {
 
 .contenedor-nosotros-jefes .card {
   border-radius: 10px 10px 20px 20px;
-  overflow: hidden; }
+  overflow: hidden;
+  max-height: 40em;
+  display: flex; }
   .contenedor-nosotros-jefes .card h5,
   .contenedor-nosotros-jefes .card p {
     color: black; }
