@@ -1,0 +1,176 @@
+.contenedor-top-5-places {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 0.1fr;
+    grid-template-areas:
+        "textotop textotop textotop textotop"
+        "media logo top1 top2"
+        "media top3 top4 top5"
+        "media footer footer footer";
+    grid-gap: 1rem;
+    margin: 5em 5em;
+}
+
+.texto-top {
+    grid-area: textotop;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    grid-area: logo;
+    position: relative;
+}
+
+.logo h1 {
+    text-align: center;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    position: absolute;
+    font-size: 2em;
+    font-weight: 900;
+    color: black;
+}
+.fondo-aberraciones-tv{
+    background-image: url(../resources/imgs/gifs/bad-tv.gif);
+    background-size: cover;
+    height: 100%;
+    padding:0;
+    margin:0;
+    border-radius: 3%;
+}
+.fondo-aberraciones-tv:hover{
+filter: blur(3px);
+}
+
+.t5p-media {
+    grid-area: media;
+}
+
+.top-1 {
+    grid-area: top1;
+}
+
+.top-2 {
+    grid-area: top2;
+}
+
+.top-3 {
+    grid-area: top3;
+}
+
+.top-4 {
+    grid-area: top4;
+}
+
+.top-5 {
+    grid-area: top5;
+}
+
+.contenedor-top-5-places .card {
+    max-width: 75%;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: 100%;
+    box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    p{
+        color: black;
+    }
+}
+
+.top-5-footer {
+
+    grid-area: footer;
+}
+
+.top5-places img {
+    width: 200px;
+}
+
+.top5-places {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 300px 50px 300px;
+}
+
+.top5-places div {
+    width: 200px;
+    min-height: 300px;
+    /* border: solid red 10px; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: inline-block;
+    margin: 15px 0 0 0;
+}
+
+.top5-places img {
+    margin-bottom: 25px;
+}
+
+.texto-random-centrado {
+    margin: 0 150px 0 150px;
+    text-align: ce;
+}
+
+// RESPONSIVE - MEDIA QUERIES
+
+@media (max-width: 699px) {
+    .contenedor-top-5-places {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "textotop"
+            "logo"
+            "media"
+            "top1"
+            "top2"
+            "top3"
+            "top4"
+            "top5"
+            "footer";
+    }
+}
+
+@media (max-width: 535px) {
+
+    .contenedor-top-5-places {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "textotop"
+            "logo"
+            "media"
+            "top1"
+            "top2"
+            "top3"
+            "top4"
+            "top5"
+            "footer";
+    }
+}
+
+@media (max-width: 391px) {
+
+    .contenedor-top-5-places {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "textotop"
+            "logo"
+            "media"
+            "top1"
+            "top2"
+            "top3"
+            "top4"
+            "top5"
+            "footer";
+    }
+}

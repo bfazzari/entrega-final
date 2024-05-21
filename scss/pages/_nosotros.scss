@@ -1,0 +1,174 @@
+.header-nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 300px;
+    background-image: url(https://stimpunks.org/wp-content/uploads/2022/12/6947226867_99e2b0a0d7_k-1568x1050.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.contenedor-pricing {
+    background-color: black;
+
+    .card {
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    }
+}
+
+.contenedor-uanc {
+    background-image: url(../resources/imgs/banners/celus-che.jpg);
+    width: 100%;
+    padding: 100px 55px;
+    background-position: right;
+    background-size: cover;
+
+    .contenido-uanc {
+        text-align: left;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        height: 100%;
+        background-size: cover;
+
+        h1 {
+            font-family: $fuente-titulos-banner;
+        }
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .contenedor-input {
+            display: flex;
+
+            button {
+                background-color: #cfcfcf;
+            }
+        }
+    }
+}
+
+.contenedor-nosotros-jefes {
+    .card {
+        border-radius: 10px 10px 20px 20px;
+        overflow: hidden;
+
+        h5,
+        p {
+            color: black;
+        }
+
+        div {
+            overflow: hidden;
+            height: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .card-img-top {
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+        filter: grayscale(75%);
+    }
+}
+
+.textos-nosotros {
+    margin: 2em 12em;
+    text-align: center;
+}
+
+.contenedor-objetivos {
+    p {
+        color: #182848;
+    }
+}
+
+@media (max-width: 1024px) {
+    .textos-nosotros {
+        margin: 2em 2em;
+
+        h4 {
+            margin: 2em 2em;
+            text-align: center;
+        }
+    }
+
+    .contenedor-uanc {
+        background-size: auto;
+
+        h1 {
+            color: black;
+        }
+
+        .contenedor-input {
+            width: 75%;
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+    .header-nosotros {
+        background-image: none;
+        padding-bottom: 60px;
+    }
+
+    .contenedor-nosotros-jefes {
+        .card {
+            div {
+                overflow: hidden;
+                height: 33%;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .contenedor-uanc {
+        padding: 50px 55px;
+        background-size: cover;
+        filter: sepia(25%);
+    }
+}
+
+@media (max-width: 699px) {
+    .textos-nosotros {
+        h4 {
+            display: none;
+        }
+    }
+    .contenedor-uanc{
+        text-shadow: 0 0 3px #000000;
+        background-size: inherit;
+        .contenido-uanc{
+            h1{
+                color: rgb(255, 251, 28);
+            }
+            li{
+                color: rgb(255, 238, 0);
+            }
+            .contenedor-input {
+                display: flex;
+                flex-direction: column;
+                button{
+                    background-color: #fae101;
+                }
+            }
+        }
+    }
+
+}

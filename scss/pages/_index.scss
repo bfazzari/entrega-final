@@ -1,0 +1,196 @@
+.header-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 300px;
+    background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/08/What-Is-the-Future-of-Live-Music.jpg?w=1581&h=1054&crop=1);
+    background-size: cover;
+    background-position-y: center;
+}
+.frase-pequeña {
+    display: none;
+}
+hr {
+    border-top: 1px solid red;
+}
+.busqueda {
+    --bs-gutter-x: 0;
+    .col-sm-3 {
+        text-align: center;
+        margin: 1em;
+        text-align: center;
+
+        button {
+            margin-top: 15px;
+        }
+    }
+}
+
+// FRASES RANDOM
+.contenedor-frases {
+    padding: 9.375rem 0rem 3.75rem 0rem;
+    background-image: url(../resources/imgs/phrases/textura-papel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    .frase {
+        position: relative;
+        width: 775px;
+        margin: auto;
+        h2 {
+            font-family: $fuente-frases;
+            font-style: italic;
+        }
+    }
+}
+
+// GRILLA DE LUGARES MAS IMPORTANTES
+.container-lugares-mas-importantes {
+    h2 {
+        margin-top: 75px;
+    }
+    iframe {
+        margin: 30px auto;
+        width: 100%;
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        border-radius: 15px;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+    button:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.7s ease-in-out;
+        background-color: #f7a800;
+        -webkit-transition: background-color 1000ms linear;
+        -ms-transition: background-color 1000ms linear;
+        transition: background-color 1000ms linear;
+    }
+    button:not(:hover) {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        transition: box-shadow 0.4s ease-in-out;
+    }
+}
+
+
+.logo-che-animado{
+    text-align: center;
+    color:rgb(230, 230, 230);
+    font-size: 0;
+    line-height: 1.5;
+    font-weight: bold;
+    span{
+        font-size: 5rem;
+        display: inline-block;
+       animation: animacion 2s ease-in-out infinite;
+    }
+}
+@keyframes animacion{
+    0%{
+        transform: translate(-30%,0);
+    }
+    50%{
+        text-shadow: 0 25px 50px black;
+    }
+}
+
+
+
+// RESPONSIVE - MEDIA QUERIES
+@media (max-width: 1170px) {
+    .contenedor-top-5-places {
+        grid-gap: 0.5rem;
+        margin: 5em 2em;
+        .card {
+            max-width: 100% !important;
+        }
+    }
+
+    .busqueda {
+        --bs-gutter-x: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .contenedor-top-5-places {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.3fr 0.3fr 0.1fr;
+        grid-template-areas:
+            "textotop textotop textotop textotop"
+            "media logo top1 top2"
+            "media top3 top4 top5"
+            "media footer footer footer";
+        grid-gap: 5px !important;
+        margin: 0 !important;
+
+    }
+}
+
+@media (max-width: 770px) {
+    .contenedor-frases {
+        background-image:none;
+        background-color: darkgray;
+        h2{
+      font-size: 1em;
+      text-align: center;
+        }
+}
+}
+
+@media (max-width: 699px) {
+    .festival img {
+        max-width: 699px;
+    }
+    .contenedor-frases {
+        display: none;
+    }
+    .frase-pequeña {
+        display: block;
+        background-color: black;
+        h2 {
+            text-align: center;
+            color: rgb(194, 194, 194);
+            padding: 100px;
+            font-family: $fuente-frases;
+        }
+    }
+    .fondo-aberraciones-tv {
+        display: none;
+    }
+    .contenedor-top-5-places {
+        margin: auto 20px !important;
+    }
+}
+
+@media (max-width: 535px) {
+    .header-index{
+        background-image: none;
+        padding-bottom: 31px;
+    }
+    .lugares img {
+        width: 100%;
+        max-width: 550px;
+    }
+    .frase-pequeña{
+        
+        h2{
+            font-size: 1em;
+            text-align: center;
+            color: #c2c2c2;
+            padding: 10px;
+            font-family:$fuente-general;
+            line-height: 2.5em;
+        }
+    }
+
+
+
+}

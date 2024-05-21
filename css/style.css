@@ -1,0 +1,954 @@
+@charset "UTF-8";
+@import url("https:fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  background-color: #e6e6e6; }
+
+.logo-che {
+  width: -50%;
+  height: -50%; }
+
+li {
+  display: inline; }
+
+a {
+  text-decoration: none; }
+
+/* BOOTSTRAP */
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end; }
+
+.navbar-nav li {
+  text-align: right; }
+
+.bg-body-tertiary {
+  background-color: black !important;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99; }
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-brand {
+  color: white;
+  text-transform: uppercase; }
+
+.navbar-nav .nav-link.active {
+  font-weight: bold; }
+
+.navbar-nav .nav-link:hover {
+  font-weight: bold;
+  color: yellow; }
+
+.navbar-brand:hover {
+  font-weight: bold;
+  color: yellow; }
+
+.navbar-toggler-icon {
+  filter: invert(100%); }
+
+.nav-item:hover {
+  color: yellow; }
+
+/* FOOTER */
+.footer-icons {
+  width: 25px;
+  display: inline-block;
+  background-color: #c7cfd6;
+  min-height: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.footer {
+  display: flex;
+  background-color: #c7cfd6;
+  min-height: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 30px 0 0 0;
+  padding-top: 10px; }
+
+.footer h1 {
+  font-size: 1.2em; }
+
+.lista-centrada a {
+  color: aliceblue;
+  font-size: 15px;
+  margin: 0 5px 0 5px; }
+
+.header-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 300px;
+  background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/08/What-Is-the-Future-of-Live-Music.jpg?w=1581&h=1054&crop=1);
+  background-size: cover;
+  background-position-y: center; }
+
+.frase-pequeña {
+  display: none; }
+
+hr {
+  border-top: 1px solid red; }
+
+.busqueda {
+  --bs-gutter-x: 0; }
+  .busqueda .col-sm-3 {
+    text-align: center;
+    margin: 1em;
+    text-align: center; }
+    .busqueda .col-sm-3 button {
+      margin-top: 15px; }
+
+.contenedor-frases {
+  padding: 9.375rem 0rem 3.75rem 0rem;
+  background-image: url(../resources/imgs/phrases/textura-papel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center; }
+  .contenedor-frases .frase {
+    position: relative;
+    width: 775px;
+    margin: auto; }
+    .contenedor-frases .frase h2 {
+      font-family: "Rubik Mono One", monospace;
+      font-style: italic; }
+
+.container-lugares-mas-importantes h2 {
+  margin-top: 75px; }
+
+.container-lugares-mas-importantes iframe {
+  margin: 30px auto;
+  width: 100%; }
+
+.container-lugares-mas-importantes button {
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+  padding: 0 10px;
+  margin-bottom: 15px; }
+
+.container-lugares-mas-importantes button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.7s ease-in-out;
+  background-color: #f7a800;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear; }
+
+.container-lugares-mas-importantes button:not(:hover) {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.4s ease-in-out; }
+
+.logo-che-animado {
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 0;
+  line-height: 1.5;
+  font-weight: bold; }
+  .logo-che-animado span {
+    font-size: 5rem;
+    display: inline-block;
+    animation: animacion 2s ease-in-out infinite; }
+
+@keyframes animacion {
+  0% {
+    transform: translate(-30%, 0); }
+  50% {
+    text-shadow: 0 25px 50px black; } }
+
+@media (max-width: 1170px) {
+  .contenedor-top-5-places {
+    grid-gap: 0.5rem;
+    margin: 5em 2em; }
+    .contenedor-top-5-places .card {
+      max-width: 100% !important; }
+  .busqueda {
+    --bs-gutter-x: 0; } }
+
+@media (max-width: 800px) {
+  .contenedor-top-5-places {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 0.1fr;
+    grid-template-areas: "textotop textotop textotop textotop" "media logo top1 top2" "media top3 top4 top5" "media footer footer footer";
+    grid-gap: 5px !important;
+    margin: 0 !important; } }
+
+@media (max-width: 770px) {
+  .contenedor-frases {
+    background-image: none;
+    background-color: darkgray; }
+    .contenedor-frases h2 {
+      font-size: 1em;
+      text-align: center; } }
+
+@media (max-width: 699px) {
+  .festival img {
+    max-width: 699px; }
+  .contenedor-frases {
+    display: none; }
+  .frase-pequeña {
+    display: block;
+    background-color: black; }
+    .frase-pequeña h2 {
+      text-align: center;
+      color: #c2c2c2;
+      padding: 100px;
+      font-family: "Rubik Mono One", monospace; }
+  .fondo-aberraciones-tv {
+    display: none; }
+  .contenedor-top-5-places {
+    margin: auto 20px !important; } }
+
+@media (max-width: 535px) {
+  .header-index {
+    background-image: none;
+    padding-bottom: 31px; }
+  .lugares img {
+    width: 100%;
+    max-width: 550px; }
+  .frase-pequeña h2 {
+    font-size: 1em;
+    text-align: center;
+    color: #c2c2c2;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2.5em; } }
+
+.header-lugares {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 300px;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/627ce7220783f2160a22cca9/36dec092-3c79-4b5a-a3ce-92c6366d7de9/DSC01019.jpg);
+  background-size: cover;
+  background-position-y: center; }
+
+.textos-mejores-festivales {
+  margin: 2em 4em;
+  text-align: center; }
+
+.contenedor-grilla-lugares {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  /* GRID */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px; }
+
+.contenedor-lugares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; }
+
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6 {
+  border-radius: 10px;
+  min-height: 200px;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center; }
+  .card-1 .textos,
+  .card-2 .textos,
+  .card-3 .textos,
+  .card-4 .textos,
+  .card-5 .textos,
+  .card-6 .textos {
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* GRID
+    display: grid;
+    grid-template-rows: 1fr auto; */ }
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover,
+.card-5:hover,
+.card-6:hover {
+  transition: transform 0.7s ease;
+  transform: scale(1.02);
+  filter: sepia(); }
+
+.card-1 {
+  background-image: url(https://st4.depositphotos.com/5392356/38061/i/450/depositphotos_380610030-stock-photo-happy-cheering-crowd-hands-air.jpg); }
+
+.card-2 {
+  background-image: url(https://i.pinimg.com/736x/c8/6f/b0/c86fb0b4ffe2e422a19211fe080de4ce.jpg); }
+
+.card-3 {
+  background-image: url(https://assets-global.website-files.com/655e0fa544c67c1ee5ce01c7/655e0fa544c67c1ee5ce0eb9_how-to-get-gigs-complete-guide-for-musicians.jpeg); }
+
+.card-4 {
+  background-image: url(https://cdn-p.smehost.net/sites/7f9737f2506941499994d771a29ad47a/wp-content/uploads/2020/02/people-having-a-concert-1190297.jpg); }
+
+.card-5 {
+  background-image: url(https://media.gettyimages.com/id/160166080/video/m-s-ext-live-concert-crowd-night-festival.jpg?s=640x640&k=20&c=qB-GzlxowiOVvxY4r8MKkfrUTrwG1RSXuazTeKmax9Y=); }
+
+.card-6 {
+  background-image: url(https://www.alpinehearingprotection.co.uk/cdn/shop/articles/bannerblogwebshopmuziek1_a02523f3-0426-4a67-9bf9-7c310aae843a.png?v=1665066849&width=1100); }
+
+.banner {
+  border-radius: 10px;
+  text-align: center !important;
+  padding: 20px;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://i.pinimg.com/originals/dc/48/bb/dc48bb6f79faf61a7ed3e20f42d60569.jpg);
+  /* FLEXBOX */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .banner .boton {
+    background: #FFD600;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer; }
+  .banner ul {
+    list-style: none;
+    padding-left: 0; }
+    .banner ul li {
+      margin: 15px;
+      font-weight: bold;
+      display: block; }
+
+/* BUSCADOR DE LUGARES */
+.contenedor-buscador-lugares {
+  width: 100%;
+  height: 300px;
+  /* max-width: 1200px; */
+  margin: auto;
+  padding: 40px 0;
+  /* GRID */
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  background-image: url(../resources/imgs/lugares/rockbands-wallpaper.jpg); }
+  .contenedor-buscador-lugares .col {
+    /* background-color: red; */
+    margin: auto 5px; }
+  .contenedor-buscador-lugares .col-alienada {
+    display: flex; }
+
+/* GRILLA */
+.contenedor-grilla {
+  background-color: black; }
+
+.img-overflow {
+  overflow: hidden; }
+
+.contenedor-grilla-lugares {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  display: flex; }
+
+.contenedor-grilla h1,
+hr,
+p {
+  color: white;
+  margin-top: 25px; }
+
+.contenedor-grilla button {
+  background-color: yellow;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 15px; }
+
+.contenedor-grilla button:hover {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: bold; }
+
+.main-bandas p {
+  text-align: center;
+  color: black; }
+
+.main-bandas h2 {
+  text-align: center; }
+
+.contenedor-bandas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+  background-color: #e6e6e6;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 10%, #e6e6e6 20%, #e6e6e6 80%, transparent 10%, transparent), radial-gradient(circle, transparent 1%, #e6e6e6 80%, #e6e6e6 10%, transparent 10%, transparent) 22.5px 22.5px, linear-gradient(#11133a 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #11133a 1.8px, #e6e6e6 1.8px) -0.9px 0;
+  background-size: 100%; }
+  .contenedor-bandas .card {
+    margin: 1em auto; }
+  .contenedor-bandas .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+  .contenedor-bandas .card-img-top {
+    transition: transform 0.3s ease; }
+  .contenedor-bandas .card:hover .card-img-top {
+    transform: scale(1.01);
+    filter: saturate(10%); }
+
+@media (max-width: 991px) {
+  .header-lugares {
+    background-image: none;
+    padding-bottom: 170px; }
+  .textos-mejores-festivales {
+    margin: 4em 4em 0 4em; }
+    .textos-mejores-festivales h1 {
+      margin-bottom: 20px; }
+  .contenedor-buscador-lugares .row {
+    flex-direction: column; }
+  .contenedor-buscador-lugares .dropdown {
+    display: none; }
+  .contenedor-grilla {
+    padding: 30px; } }
+
+@media (max-width: 800px) {
+  .texto-random-centrado {
+    margin: 0px 50px 0 50px;
+    text-align: center; } }
+
+@media (max-width: 699px) {
+  .header-lugares {
+    padding-bottom: 30px; }
+  .textos-mejores-festivales h4 {
+    display: none; }
+  .texto-random-centrado {
+    margin: 0 10px 0 10px !important;
+    text-align: center; }
+  .contenedor-grilla-lugares {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    gap: 20px; }
+  .contenedor-grilla {
+    display: none; }
+  .contenedor-lugares h3 {
+    text-shadow: 2px 2px 4px #000000; }
+  .contenedor-lugares p {
+    display: none; }
+  .contenedor-lugares .textos {
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg); }
+  .contenedor-buscador-lugares {
+    background-image: none; } }
+
+@media (max-width: 391px) {
+  .textos-mejores-festivales h4 {
+    display: none; }
+  .contenedor-grilla-lugares {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    gap: 20px; }
+  .contenedor-grilla {
+    display: none; }
+  .contenedor-lugares .textos {
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg); }
+  .contenedor-lugares p {
+    display: none; }
+  .contenedor-buscador-lugares {
+    background-image: none; }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    filter: grayscale(75%); }
+    .card-1 a,
+    .card-2 a,
+    .card-3 a,
+    .card-4 a,
+    .card-5 a,
+    .card-6 a {
+      font-weight: bold; } }
+
+.header-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 300px;
+  background-image: url(https://images.pond5.com/concert-phone-music-light-090454948_prevstill.jpeg);
+  background-size: cover;
+  background-position-y: center;
+  filter: grayscale(100%);
+  position: sticky; }
+
+/* FORMULARIO CONTACTO */
+.contenedor-form {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 25px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #eeeeee;
+  margin: 100px 450px 100px 450px;
+  padding: 100px 0 100px 0; }
+
+.main-contacto h2 {
+  text-align: center;
+  margin: 30px auto; }
+
+.main-contacto h3 {
+  margin: 20px auto;
+  text-align: center; }
+
+.main-contacto p {
+  margin: auto 250px;
+  text-align: left;
+  color: black;
+  font-weight: bold; }
+
+.container-form {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 800px; }
+  .container-form .formulario {
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    border-radius: 10px; }
+
+/* MAPA */
+.mapa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.mapa iframe {
+  width: 100%; }
+
+/* FAQ */
+.contenedor-faq {
+  background-color: #e9eced;
+  padding: 1px; }
+
+.faq {
+  width: 75%;
+  margin: 100px auto; }
+
+.faq h1 {
+  text-align: center;
+  margin-bottom: 25px; }
+
+.accordion-header {
+  margin: 5px auto !important; }
+
+@media (max-width: 1290px) {
+  .main-contacto p {
+    width: 60%;
+    margin: auto;
+    text-align: left; } }
+
+@media (max-width: 991px) {
+  .main-contacto p {
+    width: 80%; }
+  .main-contacto h2 {
+    text-align: center;
+    margin: 60px auto; } }
+
+@media (max-width: 699px) {
+  .main-contacto p {
+    display: none; }
+  .header-contacto {
+    background-image: none;
+    padding-bottom: 30px; } }
+
+@media (max-width: 391px) {
+  .main-contacto p {
+    display: none; }
+  .mapa {
+    display: none; } }
+
+.header-bandas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 300px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/Rock_concert_in_black_and_white_%28Unsplash%29.jpg);
+  background-size: cover;
+  background-position-y: center; }
+
+.main-bandas {
+  margin-top: 50px; }
+  .main-bandas h2 {
+    margin-top: 100px; }
+
+h2 {
+  text-align: center; }
+
+h3 {
+  text-align: center;
+  margin-top: 4em; }
+
+.contenedor-bandas {
+  margin: auto 10em;
+  gap: 10px;
+  width: auto; }
+  .contenedor-bandas .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .contenedor-bandas .card img {
+      width: auto;
+      height: 250px;
+      overflow: hidden; }
+    .contenedor-bandas .card .card-body p {
+      color: black; }
+    .contenedor-bandas .card .card-body .btn {
+      background-color: black; }
+
+.fondo-publicidad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(../resources/imgs/festivals/festival2.jpg);
+  height: 900px;
+  width: auto;
+  align-items: center;
+  flex-direction: column; }
+  .fondo-publicidad p {
+    max-width: 75%;
+    color: black;
+    background-color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 10px;
+    box-shadow: black 0px 22px 70px 4px;
+    line-height: 0.7; }
+  .fondo-publicidad .publi-btn {
+    display: inline-block;
+    background: black;
+    color: #e40303;
+    padding: 1em 2em;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; }
+
+@media (max-width: 1024px) {
+  .texto-random-centrado {
+    margin: 0 50px; } }
+
+@media (max-width: 500px) {
+  .texto-random-centrado {
+    margin: 0 50px; }
+  .contenedor-bandas {
+    margin: auto 5em;
+    gap: 0px;
+    width: auto; } }
+
+@media (max-width: 391px) {
+  .header-bandas {
+    background-image: none;
+    padding-bottom: 70px; } }
+
+.header-nosotros {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 300px;
+  background-image: url(https://stimpunks.org/wp-content/uploads/2022/12/6947226867_99e2b0a0d7_k-1568x1050.jpg);
+  background-size: cover;
+  background-position-y: center; }
+
+.contenedor-pricing {
+  background-color: black; }
+  .contenedor-pricing .card {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); }
+
+.contenedor-uanc {
+  background-image: url(../resources/imgs/banners/celus-che.jpg);
+  width: 100%;
+  padding: 100px 55px;
+  background-position: right;
+  background-size: cover; }
+  .contenedor-uanc .contenido-uanc {
+    text-align: left;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 100%;
+    background-size: cover; }
+    .contenedor-uanc .contenido-uanc h1 {
+      font-family: "Noto Serif", serif; }
+    .contenedor-uanc .contenido-uanc ul {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-around; }
+    .contenedor-uanc .contenido-uanc .contenedor-input {
+      display: flex; }
+      .contenedor-uanc .contenido-uanc .contenedor-input button {
+        background-color: #cfcfcf; }
+
+.contenedor-nosotros-jefes .card {
+  border-radius: 10px 10px 20px 20px;
+  overflow: hidden; }
+  .contenedor-nosotros-jefes .card h5,
+  .contenedor-nosotros-jefes .card p {
+    color: black; }
+  .contenedor-nosotros-jefes .card div {
+    overflow: hidden;
+    height: 50%; }
+  .contenedor-nosotros-jefes .card img {
+    width: 100%; }
+
+.contenedor-nosotros-jefes .card-img-top {
+  transition: transform 0.3s ease; }
+
+.contenedor-nosotros-jefes .card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+
+.contenedor-nosotros-jefes .card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: grayscale(75%); }
+
+.textos-nosotros {
+  margin: 2em 12em;
+  text-align: center; }
+
+.contenedor-objetivos p {
+  color: #182848; }
+
+@media (max-width: 1024px) {
+  .textos-nosotros {
+    margin: 2em 2em; }
+    .textos-nosotros h4 {
+      margin: 2em 2em;
+      text-align: center; }
+  .contenedor-uanc {
+    background-size: auto; }
+    .contenedor-uanc h1 {
+      color: black; }
+    .contenedor-uanc .contenedor-input {
+      width: 75%; } }
+
+@media (max-width: 991px) {
+  .header-nosotros {
+    background-image: none;
+    padding-bottom: 60px; }
+  .contenedor-nosotros-jefes .card div {
+    overflow: hidden;
+    height: 33%; } }
+
+@media (max-width: 800px) {
+  .contenedor-uanc {
+    padding: 50px 55px;
+    background-size: cover;
+    filter: sepia(25%); } }
+
+@media (max-width: 699px) {
+  .textos-nosotros h4 {
+    display: none; }
+  .contenedor-uanc {
+    text-shadow: 0 0 3px #000000;
+    background-size: inherit; }
+    .contenedor-uanc .contenido-uanc h1 {
+      color: #fffb1c; }
+    .contenedor-uanc .contenido-uanc li {
+      color: #ffee00; }
+    .contenedor-uanc .contenido-uanc .contenedor-input {
+      display: flex;
+      flex-direction: column; }
+      .contenedor-uanc .contenido-uanc .contenedor-input button {
+        background-color: #fae101; } }
+
+.festival {
+  text-align: center;
+  margin: 25px auto; }
+
+.festival img:hover {
+  filter: invert(75%); }
+
+.festival img {
+  width: 100%;
+  max-width: 653px; }
+
+.contenedor-top-5-places {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.3fr 0.3fr 0.1fr;
+  grid-template-areas: "textotop textotop textotop textotop" "media logo top1 top2" "media top3 top4 top5" "media footer footer footer";
+  grid-gap: 1rem;
+  margin: 5em 5em; }
+
+.texto-top {
+  grid-area: textotop;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.logo {
+  grid-area: logo;
+  position: relative; }
+
+.logo h1 {
+  text-align: center;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  position: absolute;
+  font-size: 2em;
+  font-weight: 900;
+  color: black; }
+
+.fondo-aberraciones-tv {
+  background-image: url(../resources/imgs/gifs/bad-tv.gif);
+  background-size: cover;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 3%; }
+
+.fondo-aberraciones-tv:hover {
+  filter: blur(3px); }
+
+.t5p-media {
+  grid-area: media; }
+
+.top-1 {
+  grid-area: top1; }
+
+.top-2 {
+  grid-area: top2; }
+
+.top-3 {
+  grid-area: top3; }
+
+.top-4 {
+  grid-area: top4; }
+
+.top-5 {
+  grid-area: top5; }
+
+.contenedor-top-5-places .card {
+  max-width: 75%;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 100%;
+  box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.2); }
+  .contenedor-top-5-places .card p {
+    color: black; }
+
+.top-5-footer {
+  grid-area: footer; }
+
+.top5-places img {
+  width: 200px; }
+
+.top5-places {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 300px 50px 300px; }
+
+.top5-places div {
+  width: 200px;
+  min-height: 300px;
+  /* border: solid red 10px; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: inline-block;
+  margin: 15px 0 0 0; }
+
+.top5-places img {
+  margin-bottom: 25px; }
+
+.texto-random-centrado {
+  margin: 0 150px 0 150px;
+  text-align: ce; }
+
+@media (max-width: 699px) {
+  .contenedor-top-5-places {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "textotop" "logo" "media" "top1" "top2" "top3" "top4" "top5" "footer"; } }
+
+@media (max-width: 535px) {
+  .contenedor-top-5-places {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "textotop" "logo" "media" "top1" "top2" "top3" "top4" "top5" "footer"; } }
+
+@media (max-width: 391px) {
+  .contenedor-top-5-places {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 0.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "textotop" "logo" "media" "top1" "top2" "top3" "top4" "top5" "footer"; } }
+
+.banner-logo {
+  background-color: black; }
+  .banner-logo p {
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    text-align: center; }

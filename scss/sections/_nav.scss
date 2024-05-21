@@ -1,0 +1,39 @@
+
+/* BOOTSTRAP */
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+.navbar-nav li {
+    text-align: right;
+}
+.bg-body-tertiary {
+    background-color: black !important;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-brand {
+    color: white;
+    text-transform: uppercase;
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: yellow;
+}
+.navbar-brand:hover {
+    font-weight: bold;
+    color: yellow;
+}
+.navbar-toggler-icon {
+    filter: invert(100%);
+}
+.nav-item:hover {
+    color: yellow;
+}

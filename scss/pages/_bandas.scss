@@ -1,0 +1,119 @@
+.header-bandas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 300px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/Rock_concert_in_black_and_white_%28Unsplash%29.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.main-bandas {
+    margin-top: 50px;
+
+    h2 {
+        margin-top: 100px;
+    }
+}
+
+// --------------------------------------
+h2 {
+    text-align: center;
+
+}
+
+h3 {
+    text-align: center;
+    margin-top: 4em;
+}
+
+.contenedor-bandas {
+    margin: auto 10em;
+    gap: 10px;
+    width: auto;
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        img {
+            width: auto;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-body {
+            p {
+                color: black
+            }
+
+            .btn {
+                background-color: black;
+            }
+        }
+
+    }
+}
+
+
+.fondo-publicidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../resources/imgs/festivals/festival2.jpg);
+    height: 900px;
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+    
+
+    p {
+        max-width: 75%;
+        color: black;
+        background-color: red;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 1.56) 0px 22px 70px 4px;
+        line-height: 0.7;
+    }
+
+    .publi-btn {
+        display: inline-block;
+        background: black;
+        color: rgb(228, 3, 3);
+        padding: 1em 2em;
+        border-radius: 25px;
+        font-weight: bold;
+
+
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+}
+
+
+// RESPONSIVE - MEDIA QUERIES
+@media (max-width: 1024px) {
+    .texto-random-centrado {
+        margin: 0 50px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .texto-random-centrado {
+        margin: 0 50px;
+    }
+
+    .contenedor-bandas {
+        margin: auto 5em;
+        gap: 0px;
+        width: auto;
+    }
+}
+
+@media (max-width: 391px) {
+    .header-bandas {
+        background-image: none;
+        padding-bottom: 70px;
+    }
+}

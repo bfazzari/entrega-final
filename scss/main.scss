@@ -1,0 +1,27 @@
+// UTILIDADES
+@import './utilities/fonts';
+
+// RESETEO
+@import './utilities/reset';
+
+// SECCIONES
+@import './sections/nav';
+@import './sections/footer';
+
+// PAGINAS
+@import './pages/index';
+@import './pages/lugares';
+@import './pages/contacto';
+@import './pages/bandas';
+@import './pages/nosotros';
+
+
+
+// SECCIONES DE PAGINAS
+@import './sections/publicidad-festival';
+@import './sections/los-5-elegidos';
+
+// MISC
+@import './utilities/banner-logo-separador';
+
+
