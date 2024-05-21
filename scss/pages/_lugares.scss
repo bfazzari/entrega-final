@@ -253,9 +253,8 @@ a{
 @media (max-width: 991px) {
     .header-lugares {
         background-image: none;
-        padding-bottom: 170px;
+        padding-bottom: 10px;
     }
-
     .textos-mejores-festivales {
         margin: 4em 4em 0 4em;
 
@@ -263,11 +262,9 @@ a{
             margin-bottom: 20px;
         }
     }
-
     .contenedor-buscador-lugares .row {
         flex-direction: column;
     }
-
     .contenedor-buscador-lugares .dropdown {
         display: none;
     }
@@ -340,6 +337,13 @@ a{
     }
 }
 
+@media (max-width:767px){
+    .contenedor-grilla {
+        p{
+            display: none;
+        }
+    }
+}
 @media (max-width: 391px) {
 
     .textos-mejores-festivales h4 {

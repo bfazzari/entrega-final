@@ -99,15 +99,19 @@
     }
 }
 
-@media (max-width: 1024px) {
+// RESPONSIVE - MEDIA QUERIES
+@media (max-width: 1272px){
     .textos-nosotros {
-        margin: 2em 2em;
+        margin: 1em;
 
         h4 {
             margin: 2em 2em;
             text-align: center;
         }
     }
+}
+@media (max-width: 1024px) {
+
 
     .contenedor-uanc {
         background-size: auto;

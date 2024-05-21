@@ -22,7 +22,7 @@
         }
     }
 }
-
+// <!-- PUBLICIDAD PARA CONTRATAR LICENCIAS -->
 .contenedor-licencias-musica {
     background-color: #212529;
     color: white;
@@ -145,19 +145,60 @@ h4 {
 @media (max-width: 1024px) {
     .texto-random-centrado {
         margin: 0 50px;
+    }
 
+    .contenedor-licencias-musica{
+        .licencias-items{
+            margin: 20px 0;
+        }
+    }
+
+}
+@media (max-width: 815px){
+    .fondo-publicidad{
+        p{
+            line-height: 1;
+        }
+    }
+.contenedor-licencias-musica{
+    padding: 25px 3px;
+    margin: 50px 0;
+}
+.licencias-items{
+    .col{
+        display: none;
     }
 }
+}
+
+
 
 @media (max-width: 500px) {
+    .header-bandas {
+        background-image: none;
+        padding-bottom: 70px;
+    }
     .texto-random-centrado {
         margin: 0 50px;
     }
-
     .contenedor-bandas {
         margin: auto 5em;
         gap: 0px;
         width: auto;
+    }
+    .fondo-publicidad{
+        background-size: contain;
+        justify-content: end;
+        p{
+            margin: 5px;
+            padding: 5px;
+        }
+    }
+    h4{
+        display: none;
+    }
+    .main-bandas {
+        margin-top: 0;
     }
 }
 

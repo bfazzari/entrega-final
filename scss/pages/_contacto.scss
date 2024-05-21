@@ -80,14 +80,22 @@
 // RESPONSIVE - MEDIA QUERIES
 
 @media (max-width: 1290px) {
-    .main-contacto p {
+    .main-contacto{
+        .textos-nosotros{           
+                margin: 2em 0 ;          
+        }
+     p {
         width: 60%;
         margin: auto;
         text-align: left;
-
     }
 }
+}
 @media (max-width: 991px){
+    .contenedor-licencias-musica{
+        padding: 0;
+        margin: 0;
+    }
     .main-contacto p {
         width: 80%;
     }
